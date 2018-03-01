@@ -81,9 +81,15 @@ $(function(){
 		});
 		carousel.on( 'select.flickity', function() {
 			selected = $(flkty.selectedElement);
+			console.log(selected);
+			//selected.closest("div").find("figure").removeClass("is-next is-next-2 is-prev is-prev-2")
+			selected.closest("div").find("figure").removeClass("[class=*'is-prev'] [class=*'is-prev']")
 			selected.removeClass("is-next is-prev")
-			selected.next().addClass("is-next");
-			selected.prev().addClass("is-prev");
+			
+			selected.prev().addClass("is-prev").prev().addClass("is-prev-2");
+			selected.next().addClass("is-next").next().addClass("is-next-2");
+
+
 		  	//console.log( $(flkty.selectedElement).next() )
 		})
 	}
@@ -96,22 +102,6 @@ $(function(){
 	  x3: 30
 	}
 
-
-	var carouselProductions = $('.short-productions-carousel .carousel-items').flickity({
-		imagesLoaded: true,
-		autoPlay: false,
-		arrowShape: arrowStyle,
-		prevNextButtons: false,
-		draggable: false,
-		selectedAttraction: 0.1,
-		friction: 1,
-		wrapAround: false,	
-		pageDots: false,
-		contain: false,
-		percentPosition: true,
-		cellAlign: !checkSm() ? '0.025' : 'center'
-	});
-	flickityPrevNext( $('.short-productions-carousel') );
 
 	var carouselNews = $('.short-news-carousel .carousel-items').flickity({
 		imagesLoaded: true,
@@ -131,6 +121,20 @@ $(function(){
 	flickityPrevNext( $('.short-news-carousel') );
 
 
+	var carouselPartners = $('.short-carousel-sites .carousel-items').flickity({
+		imagesLoaded: true,
+		autoPlay: 0,
+		arrowShape: arrowStyle,
+		initialIndex: 2,
+		prevNextButtons: false,
+		draggable: checkSm(),
+		wrapAround: null,	
+		pageDots: false,
+		contain: false,
+		percentPosition: true,
+		cellAlign: 'center'
+	});
+	flickityPrevNext( $('.short-carousel-sites') );
 
 
 
@@ -288,6 +292,13 @@ $(function(){
 
 
 
+		setTimeout( function(){
+			if( $(".main-slider .tparrows") ){
+				var mainSlider = 	$(".main-slider"),
+						farrows = 		mainSlider.find(".tparrows");
+						mainSlider.find(".arrows-content").append( farrows );
+			}
+		}, 1 )
 
 		window.revSlider = $('.rev-slider') || null;
 		var bannerSlider =  $('.rev-slider').hasClass("banner-slider") || null;
@@ -298,7 +309,7 @@ $(function(){
 		   revSlider.revolution({
 					delay:6000,
 					startwidth: checkSm() ? $( window ).width(): 1170,
-					startheight: checkSm() ? 450 :  bannerSlider ? 500 : $( window ).height(),
+					startheight: checkSm() ? 450 :  bannerSlider ? 600 : $( window ).height(),
 					autoHeight:"off",
 					fullScreenAlignForce:"off",
 
@@ -313,7 +324,7 @@ $(function(){
 					hideArrowsOnMobile:"on",
 					hideThumbsUnderResoluition:0,
 
-					hideThumbs: 100,
+					hideThumbs: 500,
 					hideTimerBar:"on",
 
 					keyboardNavigation:"off",
