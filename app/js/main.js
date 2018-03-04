@@ -38,10 +38,11 @@ $(function(){
 		extensions 	: [ 
 									"position-bottom", 
 									"fullscreen", 
-									"theme-black", 
+									//"theme-black", 
 									"listview-50", 
 									"fx-panels-slide-up", 
-									"fx-listitems-drop", 
+									"fx-listitems-slide",
+									"fx-menu-slide", 
 									"border-offset" 
 									],
 		navbar 			: 
@@ -51,9 +52,7 @@ $(function(){
 		navbars		: [{
 			height 	: 2,
 			content : [ 
-									'<div class="close-btn bar">'+
-									'<a  href="#page" ><span class="icon-bar"></span><span class="icon-bar"></span></a>'+
-									'</div>'
+									$("#min-menu-content")[0].innerHTML
 								]
 					}, 
 			{
@@ -81,9 +80,9 @@ $(function(){
 		});
 		carousel.on( 'select.flickity', function() {
 			selected = $(flkty.selectedElement);
-			console.log(selected);
-			//selected.closest("div").find("figure").removeClass("is-next is-next-2 is-prev is-prev-2")
-			selected.closest("div").find("figure").removeClass("[class=*'is-prev'] [class=*'is-prev']")
+			//console.log(selected);
+			selected.closest("div").find("figure").removeClass("is-next is-next-2 is-prev is-prev-2")
+			//selected.closest("div").find("figure").removeClass("[class=*'is-prev'] [class=*'is-prev']")
 			selected.removeClass("is-next is-prev")
 			
 			selected.prev().addClass("is-prev").prev().addClass("is-prev-2");
@@ -121,13 +120,18 @@ $(function(){
 	flickityPrevNext( $('.short-news-carousel') );
 
 
-	var carouselPartners = $('.short-carousel-sites .carousel-items').flickity({
+	var carouselSites = $('.short-carousel-sites .carousel-items').flickity({
 		imagesLoaded: true,
 		autoPlay: 0,
+		pauseAutoPlayOnHover: true,
+		dragThreshold: 5,
 		arrowShape: arrowStyle,
 		initialIndex: 2,
 		prevNextButtons: false,
+		cellSelector: 'figure',
 		draggable: checkSm(),
+		selectedAttraction: 0.3,
+		friction: 1,
 		wrapAround: null,	
 		pageDots: false,
 		contain: false,

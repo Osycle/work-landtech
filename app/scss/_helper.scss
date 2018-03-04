@@ -251,7 +251,15 @@ html{
 [class*="pie-xs"]:not([class*="-flex"]){
 	display: table-cell;
 	vertical-align: middle;
+	&.pie-dry{
+		width: 0.00001%;
+		& > *{
+			width: max-content;
+		}
+	}
+
 }
+
 @media (min-width:768px){
 	@for $i from 0 through 12{
 		.pie-sm-#{$i}{
@@ -264,6 +272,13 @@ html{
 	[class*="pie-md"]:not([class*="-flex"]){
 		display: table-cell;
 		vertical-align: middle;
+		&.pie-dry{
+			width: 0.00001%;
+			& > *{
+				width: max-content;
+			}
+		}
+
 	}
 	@for $i from 0 through 12{
 		.pie-md-#{$i}{
@@ -276,6 +291,13 @@ html{
 	[class*="pie-lg"]:not([class*="-flex"]){
 		display: table-cell;
 		vertical-align: middle;
+		&.pie-dry{
+			width: 0.00001%;
+			& > *{
+				width: max-content;
+			}
+		}
+
 	}
 	@for $i from 0 through 12{
 		.pie-lg-#{$i}{
@@ -313,7 +335,6 @@ html{
 		}
 	}
 }
-
 
 
 
@@ -368,96 +389,7 @@ html{
 
 
 
-.block{
-	display: block;
-}
-.none{
-	display: none;
-}
-.inline-block{
-	display: inline-block;
-}
-.li-inline-block{
-	li{
-		display: inline-block;
-	}
-}
 
-.vam{
-	vertical-align: middle;
-	display: inline-block;
-}
-.vam-table{
-	display: table-cell;
-	vertical-align: middle;
-	text-align: center;
-}
-
-.fuller{
-	height: 100%;
-	width: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-.claf{
-	@extend .fuller;
-	content: "";
-}
-
-.over-hidden{
-	overflow: hidden;
-}
-.bg-center{
-	background-position: center center;
-}
-
-
-.text-uppercase{
-	text-transform: uppercase;
-}
-.text-capitalize{
-	text-transform: capitalize;
-}
-.text-lowercase{
-	text-transform: lowercase;
-}
-.text-none{
-	text-transform: none;
-}
-.text-left {
-  text-align: left;
-}
-.text-right {
-  text-align: right;
-}
-.text-center {
-  text-align: center;
-}
-.text-justify {
-  text-align: justify;
-}
-.text-nowrap {
-  white-space: nowrap;
-}
-.text-lowercase {
-  text-transform: lowercase;
-}
-.text-uppercase {
-  text-transform: uppercase;
-}
-.text-capitalize {
-  text-transform: capitalize;
-}
-.img-circle {
-  border-radius: 50%;
-}
-[role="button"] {
-  cursor: pointer;
-}
-.relative{
-	position: relative;
-}
 
 
 @media (max-width: 991px){
@@ -595,4 +527,105 @@ html{
 
 
 
+.block{
+	display: block;
+}
+.none{
+	display: none;
+}
+.inline-block{
+	display: inline-block;
+}
+.li-inline-block{
+	li{
+		display: inline-block;
+	}
+}
 
+.vam{
+	vertical-align: middle;
+	display: inline-block;
+}
+.vam-table{
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.fuller{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.claf{
+	@extend .fuller;
+	content: "";
+}
+
+.over-hidden{
+	overflow: hidden;
+}
+.bg-center{
+	background-position: center center;
+}
+
+
+.relative{
+	position: relative;
+}
+
+
+
+[align="right"]{
+	margin: 15px;
+	margin-right: 0;
+}
+[align="left"]{
+	margin: 15px;
+	margin-left: 0;
+}
+[underline]{
+	text-decoration: underline;
+}
+
+img[auto]{
+	width: auto;
+}
+[resize="none"]{	
+	resize: none;
+}
+
+@media (max-width:767px){
+	[align="right"], [align="left"]{
+		margin: 15px 0;
+		padding: 0 15px;
+		width: 100%;
+		max-width: 100%;
+	}
+	
+}
+
+
+.letter-none{
+	letter-spacing: -6px;
+	*{
+		letter-spacing: 0;
+	}
+}
+
+.img-auto-adaptive{
+	.img-content{
+		@include img-auto-adaptive();
+	}
+}
+.filter-white{
+	filter: brightness(0%) invert(100%);
+}
+.filter-black{
+	filter: brightness(0%) invert(0%);
+}
+.filter-color-1{
+	filter: brightness(0%) invert(60%) sepia() hue-rotate(180deg);
+}
