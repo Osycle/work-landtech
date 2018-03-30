@@ -13192,19 +13192,34 @@ http://flickity.metafizzy.co
   -webkit-background-size: contain;
   background-size: contain; }
 
-[class*="boxes"] > div, [class*="boxes"] > figure {
-  display: inline-table;
-  vertical-align: top; }
-  [class*="boxes"] > div img, [class*="boxes"] > figure img {
-    max-height: 100%;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
-    display: block;
-    width: auto; }
+.fuller, .claf, [data-flicker]:before, .header-search .bg-wrapper, .short-advantage-items figure img:before, .partner-items figure img:before, .cell-hover, .hover-content .cell-hover, .fullscreen-container .bg-wrapper, .short-sites .bg-wrapper {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.claf, [data-flicker]:before, .header-search .bg-wrapper, .short-advantage-items figure img:before, .partner-items figure img:before {
+  content: ""; }
+
+[class*="boxes"] {
+  text-align: center; }
+  [class*="boxes"] figure *:not([class*="text-right"]):not([class*="text-left"]):not([class*="text-center"]):not([class*="desc-content"]):not(p):not(span) {
+    text-align: left;
+    text-align: unset; }
+  [class*="boxes"] > div, [class*="boxes"] > figure {
+    display: inline-table;
+    vertical-align: top; }
+    [class*="boxes"] > div .img-content img, [class*="boxes"] > figure .img-content img {
+      max-height: 100%;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+      display: block;
+      width: auto; }
 
 .boxes-1 {
-  letter-spacing: -6px;
+  letter-spacing: -5px;
   margin-left: -0%;
   margin-right: -0%; }
   .boxes-1 * {
@@ -13215,7 +13230,7 @@ http://flickity.metafizzy.co
     width: 100%; }
 
 .boxes-2 {
-  letter-spacing: -6px;
+  letter-spacing: -5px;
   margin-left: -2.5%;
   margin-right: -2.5%; }
   .boxes-2 * {
@@ -13226,7 +13241,7 @@ http://flickity.metafizzy.co
     width: 45%; }
 
 .boxes-3 {
-  letter-spacing: -6px;
+  letter-spacing: -5px;
   margin-left: -1.66667%;
   margin-right: -1.66667%; }
   .boxes-3 * {
@@ -13237,7 +13252,7 @@ http://flickity.metafizzy.co
     width: 30%; }
 
 .boxes-4 {
-  letter-spacing: -6px;
+  letter-spacing: -5px;
   margin-left: -1.25%;
   margin-right: -1.25%; }
   .boxes-4 * {
@@ -13248,7 +13263,7 @@ http://flickity.metafizzy.co
     width: 22.5%; }
 
 .boxes-5 {
-  letter-spacing: -6px;
+  letter-spacing: -5px;
   margin-left: -1%;
   margin-right: -1%; }
   .boxes-5 * {
@@ -13259,7 +13274,7 @@ http://flickity.metafizzy.co
     width: 18%; }
 
 .boxes-6 {
-  letter-spacing: -6px;
+  letter-spacing: -5px;
   margin-left: -0.83333%;
   margin-right: -0.83333%; }
   .boxes-6 * {
@@ -13271,7 +13286,7 @@ http://flickity.metafizzy.co
 
 @media (max-width: 991px) {
   .boxes-6, .boxes-5, .boxes-4 {
-    letter-spacing: -6px;
+    letter-spacing: -5px;
     margin-left: -1.66667%;
     margin-right: -1.66667%; }
     .boxes-6 *, .boxes-5 *, .boxes-4 * {
@@ -13283,7 +13298,7 @@ http://flickity.metafizzy.co
 
 @media (max-width: 767px) {
   .boxes-6, .boxes-5, .boxes-4, .boxes-3 {
-    letter-spacing: -6px;
+    letter-spacing: -5px;
     margin-left: -2.5%;
     margin-right: -2.5%; }
     .boxes-6 *, .boxes-5 *, .boxes-4 *, .boxes-3 * {
@@ -13295,7 +13310,7 @@ http://flickity.metafizzy.co
 
 @media (max-width: 480px) {
   .boxes-6, .boxes-5, .boxes-4, .boxes-3, .boxes-2 {
-    letter-spacing: -6px;
+    letter-spacing: -5px;
     margin-left: -0%;
     margin-right: -0%; }
     .boxes-6 *, .boxes-5 *, .boxes-4 *, .boxes-3 *, .boxes-2 * {
@@ -13342,7 +13357,7 @@ http://flickity.metafizzy.co
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     padding: 0 5%; }
-    .hover-content .cell-hover > div {
+    .hover-content .cell-hover > div:not([class]) {
       width: 100%; }
   .hover-content:hover .cell-hover {
     opacity: 1; }
@@ -13474,7 +13489,7 @@ http://flickity.metafizzy.co
     .logo {
       height: 210px; } }
 
-.header-search .wrapper-bg {
+.header-search .bg-wrapper {
   width: 100% !important;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
@@ -13530,7 +13545,7 @@ http://flickity.metafizzy.co
 .header-search #search-checkbox {
   display: none; }
 
-.header-search #search-checkbox:checked ~ .wrapper-bg {
+.header-search #search-checkbox:checked ~ .bg-wrapper {
   opacity: 1;
   visibility: visible; }
 
@@ -13918,13 +13933,14 @@ h2 {
 
 h3 {
   font-size: 1.25em;
-  font-weight: 600; }
+  font-weight: 700; }
 
 h4 {
   font-size: 1.125em;
   font-weight: 700; }
 
 h5 {
+  font-weight: 700;
   font-size: inherit; }
 
 p {
@@ -13955,6 +13971,8 @@ main {
 .main-content {
   z-index: 1;
   position: relative; }
+  .main-content ol, .main-content ul {
+    text-align: left; }
 
 .main-slider {
   z-index: 0;
@@ -13983,7 +14001,7 @@ main {
   height: 100%; }
   .fullscreen-container li > img {
     z-index: 2; }
-  .fullscreen-container .wrapper-bg {
+  .fullscreen-container .bg-wrapper {
     display: none;
     pointer-events: none;
     opacity: 1;
@@ -14008,13 +14026,12 @@ main {
       padding-bottom: 0;
       font-family: "Open sans"; }
     .rev-slider .slide-header h1 {
-      text-transform: uppercase;
+      text-transform: none;
       margin-top: 0;
       margin-bottom: 0;
       padding: 10px 5px;
-      font-size: 40px;
-      font-weight: 700;
-      color: #2c742a; }
+      font-size: 42px;
+      font-weight: 700; }
     .rev-slider .slide-header p {
       color: white;
       font-weight: 400;
@@ -14042,6 +14059,8 @@ main {
       .rev-slider h1, .rev-slider h2 {
         text-align: center !important;
         font-size: 1.25em; } }
+  .rev-slider.banner-slider .slide-header {
+    width: auto; }
 
 .banner-icons {
   width: 85%; }
@@ -14177,9 +14196,6 @@ main {
     width: 100px;
     height: 100px; }
 
-.short-advantage {
-  overflow: hidden; }
-
 @-webkit-keyframes zoomAd {
   from {
     -webkit-transform: scale(0.8);
@@ -14203,6 +14219,9 @@ main {
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
     opacity: 0; } }
+
+.short-advantage {
+  overflow: hidden; }
 
 .short-advantage-items {
   text-align: center; }
@@ -14249,17 +14268,21 @@ main {
       -webkit-transition: all 0.3s ease-in-out;
       -o-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out; }
-    .short-advantage-items figure img:before {
-      background-repeat: no-repeat;
-      background-position: center;
-      overflow: visible;
-      -webkit-background-size: cover;
-      background-size: cover; }
+    .short-advantage-items figure img {
+      width: 75px; }
+      .short-advantage-items figure img:before {
+        background-repeat: no-repeat;
+        background-position: center;
+        overflow: visible;
+        -webkit-background-size: cover;
+        background-size: cover; }
     .short-advantage-items figure:focus .flicker-img img, .short-advantage-items figure:hover .flicker-img img {
       -webkit-animation: zoomAd 1s ease-out infinite;
       animation: zoomAd 1s ease-out infinite; }
   .short-advantage-items .img-content {
     position: relative; }
+  .short-advantage-items .desc-content {
+    text-align: center; }
   .short-advantage-items .flicker-img {
     width: 100%;
     position: absolute; }
@@ -14284,7 +14307,7 @@ main {
     top: 0;
     position: absolute;
     z-index: 1; }
-  .short-sites .wrapper-bg {
+  .short-sites .bg-wrapper {
     background-color: #2c742a;
     -webkit-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
     clip-path: polygon(100% 0, 0% 100%, 100% 100%);
@@ -14437,13 +14460,164 @@ main {
     -ms-transform: scale(0.2) translateX(650%);
     transform: scale(0.2) translateX(650%); }
 
+.partner-items {
+  text-align: center; }
+  .partner-items figure .img-content {
+    min-height: 150px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .partner-items figure .img-content.center {
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center; }
+    .partner-items figure .img-content.top {
+      -webkit-box-align: end;
+      -webkit-align-items: end;
+      -ms-flex-align: end;
+      align-items: end;
+      -webkit-align-items: flex-end;
+      align-items: flex-end; }
+    .partner-items figure .img-content.start {
+      -webkit-box-align: start;
+      -webkit-align-items: start;
+      -ms-flex-align: start;
+      align-items: start;
+      -webkit-align-items: flex-start;
+      align-items: flex-start; }
+  .partner-items figure, .partner-items figure img {
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+  .partner-items figure img {
+    width: 110px;
+    max-width: auto;
+    max-height: auto;
+    height: auto;
+    margin: 0 auto;
+    display: block; }
+    .partner-items figure img:before {
+      background-repeat: no-repeat;
+      background-position: center;
+      overflow: visible;
+      -webkit-background-size: cover;
+      background-size: cover; }
+  .partner-items figure:focus .flicker-img img, .partner-items figure:hover .flicker-img img {
+    -webkit-animation: zoomAd 1s ease-out infinite;
+    animation: zoomAd 1s ease-out infinite; }
+  .partner-items .img-content {
+    width: 100px;
+    margin: auto;
+    height: 110px;
+    position: relative; }
+  .partner-items .desc-content {
+    text-align: center; }
+  .partner-items .flicker-img {
+    width: 100%;
+    position: absolute; }
+    .partner-items .flicker-img img {
+      -webkit-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      opacity: 0.1;
+      -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      transform: scale(1.2); }
+
+.partner-services-items .img-content {
+  width: 100%;
+  overflow: hidden; }
+  .partner-services-items .img-content img {
+    -webkit-transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+    -o-transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1); }
+
+.partner-services-items .hover-content:hover .cell-cirlce, .partner-services-items .hover-content:hover .cell-hover {
+  opacity: 1;
+  -webkit-transform: unset;
+  -ms-transform: unset;
+  transform: unset; }
+
+.partner-services-items .hover-content:hover .cell-cirlce.flicker {
+  -webkit-animation: zoomAd 1.5s ease-out infinite;
+  animation: zoomAd 1.5s ease-out infinite; }
+
+.partner-services-items .hover-content:hover .img-content img {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2); }
+
+.partner-services-items .hover-content .cell-hover {
+  -webkit-transition: all 0.6s ease-in-out 0s;
+  -o-transition: all 0.6s ease-in-out 0s;
+  transition: all 0.6s ease-in-out 0s;
+  opacity: 0;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  background-color: rgba(44, 116, 42, 0.8);
+  -webkit-background-clip: content-box;
+  background-clip: content-box;
+  padding: 13px; }
+
+.partner-services-items .hover-content .cell-cirlce.flicker {
+  position: absolute;
+  left: 50%;
+  margin-left: -40px;
+  margin-top: -40px;
+  top: 50%; }
+
+.partner-services-items .hover-content .cell-cirlce {
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+  background-color: black;
+  margin: auto;
+  width: 80px;
+  height: 80px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .partner-services-items .hover-content .cell-cirlce i {
+    font-size: 20px;
+    margin-left: 3px;
+    width: 100%;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center; }
+
+.partner-services-item .text-content {
+  height: 390px;
+  overflow: auto;
+  padding-bottom: 50px; }
+
+.partner-services-item .btn-content {
+  bottom: 0;
+  position: absolute; }
+
 /*
 										 ---FOOTER---
 */
 #footer {
   position: relative;
+  background-image: url("../img/bg/footer-bg.jpg");
+  background-position: center;
   background-repeat: no-repeat;
-  background-position-y: bottom; }
+  -webkit-background-size: cover;
+  background-size: cover; }
   #footer p {
     line-height: 170%; }
 
@@ -14571,50 +14745,6 @@ main {
     background-color: transparent; }
   .flickity-btn-1 .flickity-prev-next-button .arrow {
     fill: white; }
-
-.stock-news {
-  /* cell number */ }
-  .stock-news .carousel-container {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex; }
-  .stock-news .carousel {
-    margin-bottom: 40px;
-    -webkit-box-flex: 1;
-    -webkit-flex-grow: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1; }
-  .stock-news .carousel-cell {
-    width: 66%;
-    height: 300px;
-    margin-right: 10px;
-    background: #8C8;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    counter-increment: carousel-cell; }
-  .stock-news .carousel-cell:before {
-    display: block;
-    text-align: center;
-    content: counter(carousel-cell);
-    line-height: 300px;
-    font-size: 80px;
-    color: white; }
-  .stock-news .carousel-nav {
-    width: 120px;
-    margin-left: 10px;
-    max-height: 300px;
-    overflow-y: scroll; }
-  .stock-news .carousel-nav .carousel-cell {
-    height: 80px;
-    width: 100px;
-    margin: 0 0 5px 0;
-    cursor: pointer; }
-  .stock-news .carousel-nav .carousel-cell:before {
-    font-size: 50px;
-    line-height: 80px; }
-  .stock-news .carousel-nav .carousel-cell.is-nav-selected {
-    background: #ED2; }
 
 .carousel-article {
   position: relative;
@@ -16723,16 +16853,6 @@ html .p-r-120 {
   display: table-cell;
   vertical-align: middle;
   text-align: center; }
-
-.fuller, .cell-hover, .hover-content .cell-hover, .header-search .wrapper-bg, .fullscreen-container .wrapper-bg, .short-sites .wrapper-bg, .claf, [data-flicker]:before, .short-advantage-items figure img:before {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0; }
-
-.claf, [data-flicker]:before, .header-search .wrapper-bg, .short-advantage-items figure img:before {
-  content: ""; }
 
 .over-hidden {
   overflow: hidden; }

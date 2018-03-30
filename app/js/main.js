@@ -1,6 +1,6 @@
 'use strict';
 
-(function(){
+(function($){
 $(function(){
 
 
@@ -156,7 +156,7 @@ $(function(){
 				cellAlign: 'center',
 				//friction: 1,
 				//selectedAttraction: 1,
-				initialIndex: 0,
+				initialIndex: 1,
 				draggable: true,
 				contain: true,
 				pageDots: false
@@ -313,7 +313,7 @@ $(function(){
 		   revSlider.revolution({
 					delay:6000,
 					startwidth: checkSm() ? $( window ).width(): 1170,
-					startheight: checkSm() ? 450 :  bannerSlider ? 600 : $( window ).height(),
+					startheight: checkSm() ? 450 :  bannerSlider ? 490 : 600,
 					autoHeight:"off",
 					fullScreenAlignForce:"off",
 
