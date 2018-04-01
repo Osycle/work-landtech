@@ -150,7 +150,38 @@ html{
 
 }
 
+// BREADCRUMP
 
+.breadcrumb{
+	background: transparent;
+	color: black;
+	&, a, .active{ 
+		color: rgba(black, 0.4);
+		transition: all 0.3s ease-in;
+		font-weight: 500;
+		font-size: em(16, 16);
+		a:hover{
+			transform: translateY(-5px);
+			text-decoration: none;
+			color: $color-2;
+		}
+	}
+	.active{
+		a{color: $color-2;}
+	}
+	& > li + li:before{
+
+		color: rgba(black, 0.4);
+		font-family: FontAwesome;
+		content: "/";
+		font-weight: 700;
+		font-size: 1.5em;
+		margin:0  15px;
+	}
+	li{
+
+	}
+}
 
 
 
