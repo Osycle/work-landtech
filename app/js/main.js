@@ -130,7 +130,7 @@ $(function(){
 		prevNextButtons: false,
 		cellSelector: 'figure',
 		draggable: checkSm(),
-		selectedAttraction: 0.3,
+		selectedAttraction: 0.2,
 		friction: 1,
 		wrapAround: null,	
 		pageDots: false,
