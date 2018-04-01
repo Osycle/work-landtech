@@ -8,12 +8,22 @@
 	background-position: center;
 	background-size: contain;
 }
-
+.fuller{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.claf{
+	@extend .fuller;
+	content: "";
+}
 @mixin boxes-items( $width: 75, $item: 3, $tag: figure ) {
 
 	$mrow : ( (100 - $width)/($item*2) )+%;
 
-	letter-spacing: -6px;
+	letter-spacing: -5px;
 	*{
 		letter-spacing: 0;
 	}
@@ -24,16 +34,27 @@
 
 		margin-left: $mrow;
 		margin-right: $mrow;
+		//width: ( ($width/$item)+( $item / ( $item * 10) ) )+%;
 		width: ($width/$item)+%;
 
 	}
 }
 
 [class*="boxes"]{	
+	text-align: center;
+	figure{
+		*:not([class*="text-right"], [class*="text-left"], [class*="text-center"], [class*="desc-content"], p, span){
+			text-align: left;
+			//text-align: initial;
+			text-align: unset;
+		}
+	}
 	&>div, &>figure{
 		display: inline-table;
 		vertical-align: top;
-		@include img-auto-adaptive();
+		.img-content {
+			@include img-auto-adaptive();
+		}
 	}		
 }
 
@@ -71,7 +92,6 @@
 		@include boxes-items( 100, 1 );
 	}
 }
-
 .cell-hover{
 	opacity: 0;
 	padding: 0 5%;
@@ -96,7 +116,7 @@
 		opacity: 0;
 		transition: all 0.3s ease-in-out;
 		padding: 0 5%;
-		&>div{
+		&>div:not([class]){
 			width: 100%;
 		}
 	}
@@ -288,7 +308,7 @@ $header-min-menu: 100px;
 
 .header-search{
 	//position: relative;
-	.wrapper-bg{
+	.bg-wrapper{
 		@extend .claf;
 		@extend .fuller;
 		width: 100% !important;
@@ -342,7 +362,7 @@ $header-min-menu: 100px;
 		display: none;
 	}
 	#search-checkbox:checked{
-		& ~ .wrapper-bg{
+		& ~ .bg-wrapper{
 			opacity: 1;
 			visibility: visible;
 		}
@@ -783,13 +803,14 @@ h2{
 } 
 h3{
 	font-size: em(20, 16);
-	font-weight: 600;
+	font-weight: 700;
 }
 h4{
 	font-size: em(18, 16);
 	font-weight: 700;
 }
 h5{
+	font-weight: 700;
 	font-size: inherit;
 }
 
@@ -829,6 +850,9 @@ main{
 .main-content{
 	z-index: 1;
 	position: relative;
+	ol, ul{
+		text-align: left;
+	}
 }
 
 
@@ -870,7 +894,7 @@ main{
 	li>img{
 		z-index: 2;
 	}
-	.wrapper-bg{
+	.bg-wrapper{
 		@extend .fuller;
 		display: none;
 		pointer-events: none;
@@ -905,13 +929,12 @@ main{
 			font-family: $font-family-1;
 		}
 		h1{
-			text-transform: uppercase;
+			text-transform: none;
 			margin-top: 0;
 			margin-bottom: 0;
 			padding: 10px 5px;
-			font-size: 40px;
+			font-size: 42px;
 			font-weight: 700;
-			color: $color-1;
 		}
 		p{
 			color: white;
@@ -926,7 +949,6 @@ main{
 			margin-top: 30px;
 			width: 220px;
 		}
-
 	}
 	@media (min-width: 992px) {
 		h1{
@@ -953,9 +975,13 @@ main{
 			font-size: em(20, 16);
 		}
 	}
+	@media (max-width: 767px){
 
-	@media only screen and (max-width: 767px){
-
+	}
+	&.banner-slider{
+		.slide-header{
+			width: auto;
+		}
 	}
 }//end
 
@@ -1108,13 +1134,6 @@ main{
 
 
 
-//short-advantage
-.short-advantage{
-	overflow: hidden;
-	.container{
-		//outline: 1px solid;
-	}
-}
 @keyframes zoomAd {
   from {
     transform: scale(0.8);
@@ -1127,6 +1146,14 @@ main{
   	transform: scale(1.2);
     opacity: 0;
   }
+}
+
+//short-advantage
+.short-advantage{
+	overflow: hidden;
+	.container{
+		//outline: 1px solid;
+	}
 }
 .short-advantage-items{
 	$width: 180;	
@@ -1143,6 +1170,7 @@ main{
 			transition: all 0.3s ease-in-out;
 		}
 		img{
+			width: 75px;
 			&:before{
 				@extend .claf;
 				background-repeat: no-repeat;
@@ -1162,6 +1190,9 @@ main{
 	}
 	.img-content{
 		position: relative;
+	}
+	.desc-content{
+		text-align: center;
 	}
 	.flicker-img{
 		width: 100%;
@@ -1194,7 +1225,7 @@ main{
 			//top: 35px;
 		}
 	}
-	.wrapper-bg{
+	.bg-wrapper{
 		@extend .fuller;
 		background-color: $color-1;
 		clip-path: polygon(100% 0, 0% 100%, 100% 100%);
@@ -1345,6 +1376,151 @@ main{
 
 
 
+
+
+
+// partner
+.partner{
+
+}
+.partner-items{
+	$width: 180;	
+	//@include align-fixWidth($width, 5);
+	text-align: center;
+	figure{
+		@include img-flex-align( center, 150px );
+		&, img{
+			transition: all 0.3s ease-in-out;
+		}
+		img{
+			width: 110px;
+			max-width: auto;
+			max-height: auto;
+			height: auto;
+			margin: 0 auto;
+			display: block;
+			&:before{
+				@extend .claf;
+				background-repeat: no-repeat;
+				background-position: center;
+				overflow: visible;
+				background-size: cover;
+			}
+		}
+		&:focus, &:hover{
+			.flicker-img{
+				img{
+					animation: zoomAd 1s ease-out infinite;
+				}
+			}
+		}
+
+	}
+	.img-content{
+		width: 100px;
+		margin: auto;
+		height: 110px;
+		position: relative;
+	}
+	.desc-content{
+		text-align: center;
+	}
+	.flicker-img{
+		width: 100%;
+    position: absolute;
+    img{
+    	transition: all 0.3s ease-in-out;
+    	opacity: 0.1;
+    	transform: scale(1.2);
+    }
+	}
+}
+
+//partner-services
+.partner-services-items{
+	figure{
+	}
+	.img-content{
+		width: 100%;
+		//height:220px;
+		img{
+			transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+		}
+		overflow: hidden;
+	}
+	.hover-content{
+
+		&:hover{
+			.cell-cirlce, .cell-hover{
+				opacity: 1;
+				transform: unset;
+			}
+			.cell-cirlce.flicker{
+				animation: zoomAd 1.5s ease-out infinite;
+			}
+			.img-content img{
+				transform: scale(1.2);
+			}
+		}
+		.cell-hover{
+			transition: all 0.6s ease-in-out 0s;
+			opacity: 0;
+			transform: scale(1.1);
+			background-color: rgba($color-1, 0.8);
+			background-clip: content-box;
+			padding: 13px;
+		}
+		.cell-cirlce.flicker{
+			position: absolute;
+			left: 50%;
+			margin-left: -40px;
+			margin-top: -40px;
+			top: 50%;
+		}
+		.cell-cirlce{
+			opacity: 0;
+			transition: all 0.3s ease-in-out;
+			transform: scale(0.8);
+			background-color: black;
+			//display: inline-block;
+			margin: auto;
+			width: 80px;
+			height: 80px;
+			border-radius: 50%;
+			display: flex;
+			i{
+				font-size: 20px;
+				margin-left: 3px;
+				width: 100%;
+				align-self: center;
+			}
+		}
+	}
+}
+.partner-services-item{
+	.carousel-article{
+		//min-height: 400px;
+	}
+	.text-content{
+		height: 390px;
+		overflow: auto;
+		padding-bottom: 50px;
+	}
+	.btn-content{
+		bottom: 0;
+		position: absolute;
+	}
+}
+
+
+
+
+
+
+
+
+
+
 /*
 										 ---FOOTER---
 */
@@ -1352,9 +1528,11 @@ main{
 
 #footer{
 	position: relative;
-	//min-height: 400px;
+	background-image: url("../img/bg/footer-bg.jpg");
+	background-position: center;
 	background-repeat: no-repeat;
-	background-position-y: bottom;
+	background-size: cover;
+	//min-height: 400px;
 	p{
 		line-height: 170%;
 	}
@@ -1558,62 +1736,6 @@ main{
 
 
 
-
-
-.stock-news{
-
-	.carousel-container {
-	  display: flex;
-	}
-
-	.carousel {
-	  margin-bottom: 40px;
-	  flex-grow: 1;
-	}
-
-	.carousel-cell {
-	  width: 66%;
-	  height: 300px;
-	  margin-right: 10px;
-	  background: #8C8;
-	  border-radius: 5px;
-	  counter-increment: carousel-cell;
-	}
-
-	/* cell number */
-	.carousel-cell:before {
-	  display: block;
-	  text-align: center;
-	  content: counter(carousel-cell);
-	  line-height: 300px;
-	  font-size: 80px;
-	  color: white;
-	}
-
-	.carousel-nav {
-	  width: 120px;
-	  margin-left: 10px;
-	  max-height: 300px;
-	  overflow-y: scroll;
-	}
-
-	.carousel-nav .carousel-cell {
-	  height: 80px;
-	  width: 100px;
-	  margin: 0 0 5px 0;
-	  cursor: pointer;
-	}
-
-	.carousel-nav .carousel-cell:before {
-	  font-size: 50px;
-	  line-height: 80px;
-	}
-
-	.carousel-nav .carousel-cell.is-nav-selected {
-	  background: #ED2;
-	}
-
-}
 
 
 
