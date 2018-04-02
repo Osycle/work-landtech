@@ -1,7 +1,7 @@
-/*
-		_helper.scss	
-*/
-
+/*!
+ *  Pietrap 0.5.2 by @osycle - https://t.me/osycle
+ *  License - http://lifestyle.uz/license (CSS: MIT License)
+ */
 
 
 
@@ -174,11 +174,16 @@ html{
 	.pie-cells-#{$i}{
 		.pie-cell{
 			width: ( 100/$i )+%;
-			//width: ( ($i*100) /12)+%;
 		}
 	}
 }
-
+@media  (max-width: 991px ){
+	[class*="pie-cells"]{
+		.pie-cell{
+			width: 100%;
+		}
+	}
+}
 
 
 

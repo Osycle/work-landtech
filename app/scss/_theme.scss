@@ -6,7 +6,7 @@
 */
 
 $color-1: #2c742a !default;	// SALAT
-$color-2: #418237 !default;	// GREEN
+$color-2: #f5ad00 !default;	// GREEN
 $color-3: #19204A !default;	// BLUE-DARK
 $color-4: #ffa800 !default;	// LIGHT ORANGE
 $color-5: #008CC7 !default;	// LIGHT ORANGE
@@ -27,32 +27,6 @@ $color-gray_3: #212121;
 [class*="col"]{
 	padding-left: 0;
 	padding-right: 0;
-}
-
-
-.table-content{
-	overflow-x: auto;
-	table { 
-		width: 100%;
-		@extend .table; 
-		th{
-			border-right: 1px solid;
-			background-color: rgba($color-1, 1);
-			color: white;
-		}
-		td{
-			border-color: rgba($color-1, 0.2) !important;
-		}
-		tbody{
-			tr:nth-child(odd){
-				background-color: rgba($color-1, 0.1);
-			}
-			tr:nth-child(even){
-				//background-color: rgba($color-1, 0.1);
-			}
-		}
-
-	}
 }
 
 
@@ -248,7 +222,7 @@ ul{
 input:focus, button:focus{
 	outline: transparent;
 }
-b{font-weight: 600;}
+b{font-weight: 700;}
 strong{font-weight: 700;}
 textarea{
 	&:focus{
@@ -262,6 +236,27 @@ label{
 	margin-bottom: 0;
 }
 
+table { 
+	width: 100%;
+	@extend .table; 
+	th{
+		border-right: 1px solid;
+		background-color: rgba($color-1, 1);
+		color: white;
+	}
+	td{
+		border-color: rgba($color-1, 0.2) !important;
+	}
+	tbody{
+		tr:nth-child(odd){
+			background-color: rgba($color-1, 0.1);
+		}
+		tr:nth-child(even){
+			//background-color: rgba($color-1, 0.1);
+		}
+	}
+
+}
 
 .color-white{color: white;}
 .color-black{color: #15181e;}
@@ -300,7 +295,9 @@ label{
 .text-indent{
 	text-indent: 30px;
 }
-
+.transform-none{
+	text-transform: none;
+}
 .letter-3{
 	letter-spacing: 3px;
 }

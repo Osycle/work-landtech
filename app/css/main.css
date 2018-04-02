@@ -2867,10 +2867,10 @@ template {
     border-top-color: #000 !important; }
   .label {
     border: 1px solid #000; }
-  .table, .table-content table {
+  .table, table {
     border-collapse: collapse !important; }
-    .table td, .table-content table td,
-    .table th, .table-content table th {
+    .table td, table td,
+    .table th, table th {
       background-color: #fff !important; }
   .table-bordered th,
   .table-bordered td {
@@ -3871,33 +3871,33 @@ caption {
 th {
   text-align: left; }
 
-.table, .table-content table {
+.table, table {
   width: 100%;
   max-width: 100%;
   margin-bottom: 20px; }
-  .table > thead > tr > th, .table-content table > thead > tr > th,
-  .table > thead > tr > td, .table-content table > thead > tr > td,
-  .table > tbody > tr > th, .table-content table > tbody > tr > th,
-  .table > tbody > tr > td, .table-content table > tbody > tr > td,
-  .table > tfoot > tr > th, .table-content table > tfoot > tr > th,
-  .table > tfoot > tr > td, .table-content table > tfoot > tr > td {
+  .table > thead > tr > th, table > thead > tr > th,
+  .table > thead > tr > td, table > thead > tr > td,
+  .table > tbody > tr > th, table > tbody > tr > th,
+  .table > tbody > tr > td, table > tbody > tr > td,
+  .table > tfoot > tr > th, table > tfoot > tr > th,
+  .table > tfoot > tr > td, table > tfoot > tr > td {
     padding: 8px;
     line-height: 1.42857;
     vertical-align: top;
     border-top: 1px solid #ddd; }
-  .table > thead > tr > th, .table-content table > thead > tr > th {
+  .table > thead > tr > th, table > thead > tr > th {
     vertical-align: bottom;
     border-bottom: 2px solid #ddd; }
-  .table > caption + thead > tr:first-child > th, .table-content table > caption + thead > tr:first-child > th,
-  .table > caption + thead > tr:first-child > td, .table-content table > caption + thead > tr:first-child > td,
-  .table > colgroup + thead > tr:first-child > th, .table-content table > colgroup + thead > tr:first-child > th,
-  .table > colgroup + thead > tr:first-child > td, .table-content table > colgroup + thead > tr:first-child > td,
-  .table > thead:first-child > tr:first-child > th, .table-content table > thead:first-child > tr:first-child > th,
-  .table > thead:first-child > tr:first-child > td, .table-content table > thead:first-child > tr:first-child > td {
+  .table > caption + thead > tr:first-child > th, table > caption + thead > tr:first-child > th,
+  .table > caption + thead > tr:first-child > td, table > caption + thead > tr:first-child > td,
+  .table > colgroup + thead > tr:first-child > th, table > colgroup + thead > tr:first-child > th,
+  .table > colgroup + thead > tr:first-child > td, table > colgroup + thead > tr:first-child > td,
+  .table > thead:first-child > tr:first-child > th, table > thead:first-child > tr:first-child > th,
+  .table > thead:first-child > tr:first-child > td, table > thead:first-child > tr:first-child > td {
     border-top: 0; }
-  .table > tbody + tbody, .table-content table > tbody + tbody {
+  .table > tbody + tbody, table > tbody + tbody {
     border-top: 2px solid #ddd; }
-  .table .table, .table-content table .table, .table .table-content table, .table-content .table table, .table-content table table {
+  .table .table, table .table, .table table, table table {
     background-color: #fff; }
 
 .table-condensed > thead > tr > th,
@@ -3938,18 +3938,18 @@ table th[class*="col-"] {
   float: none;
   display: table-cell; }
 
-.table > thead > tr > td.active, .table-content table > thead > tr > td.active,
-.table > thead > tr > th.active, .table-content table > thead > tr > th.active,
-.table > thead > tr.active > td, .table-content table > thead > tr.active > td,
-.table > thead > tr.active > th, .table-content table > thead > tr.active > th,
-.table > tbody > tr > td.active, .table-content table > tbody > tr > td.active,
-.table > tbody > tr > th.active, .table-content table > tbody > tr > th.active,
-.table > tbody > tr.active > td, .table-content table > tbody > tr.active > td,
-.table > tbody > tr.active > th, .table-content table > tbody > tr.active > th,
-.table > tfoot > tr > td.active, .table-content table > tfoot > tr > td.active,
-.table > tfoot > tr > th.active, .table-content table > tfoot > tr > th.active,
-.table > tfoot > tr.active > td, .table-content table > tfoot > tr.active > td,
-.table > tfoot > tr.active > th, .table-content table > tfoot > tr.active > th {
+.table > thead > tr > td.active, table > thead > tr > td.active,
+.table > thead > tr > th.active, table > thead > tr > th.active,
+.table > thead > tr.active > td, table > thead > tr.active > td,
+.table > thead > tr.active > th, table > thead > tr.active > th,
+.table > tbody > tr > td.active, table > tbody > tr > td.active,
+.table > tbody > tr > th.active, table > tbody > tr > th.active,
+.table > tbody > tr.active > td, table > tbody > tr.active > td,
+.table > tbody > tr.active > th, table > tbody > tr.active > th,
+.table > tfoot > tr > td.active, table > tfoot > tr > td.active,
+.table > tfoot > tr > th.active, table > tfoot > tr > th.active,
+.table > tfoot > tr.active > td, table > tfoot > tr.active > td,
+.table > tfoot > tr.active > th, table > tfoot > tr.active > th {
   background-color: #f5f5f5; }
 
 .table-hover > tbody > tr > td.active:hover,
@@ -3959,18 +3959,18 @@ table th[class*="col-"] {
 .table-hover > tbody > tr.active:hover > th {
   background-color: #e8e8e8; }
 
-.table > thead > tr > td.success, .table-content table > thead > tr > td.success,
-.table > thead > tr > th.success, .table-content table > thead > tr > th.success,
-.table > thead > tr.success > td, .table-content table > thead > tr.success > td,
-.table > thead > tr.success > th, .table-content table > thead > tr.success > th,
-.table > tbody > tr > td.success, .table-content table > tbody > tr > td.success,
-.table > tbody > tr > th.success, .table-content table > tbody > tr > th.success,
-.table > tbody > tr.success > td, .table-content table > tbody > tr.success > td,
-.table > tbody > tr.success > th, .table-content table > tbody > tr.success > th,
-.table > tfoot > tr > td.success, .table-content table > tfoot > tr > td.success,
-.table > tfoot > tr > th.success, .table-content table > tfoot > tr > th.success,
-.table > tfoot > tr.success > td, .table-content table > tfoot > tr.success > td,
-.table > tfoot > tr.success > th, .table-content table > tfoot > tr.success > th {
+.table > thead > tr > td.success, table > thead > tr > td.success,
+.table > thead > tr > th.success, table > thead > tr > th.success,
+.table > thead > tr.success > td, table > thead > tr.success > td,
+.table > thead > tr.success > th, table > thead > tr.success > th,
+.table > tbody > tr > td.success, table > tbody > tr > td.success,
+.table > tbody > tr > th.success, table > tbody > tr > th.success,
+.table > tbody > tr.success > td, table > tbody > tr.success > td,
+.table > tbody > tr.success > th, table > tbody > tr.success > th,
+.table > tfoot > tr > td.success, table > tfoot > tr > td.success,
+.table > tfoot > tr > th.success, table > tfoot > tr > th.success,
+.table > tfoot > tr.success > td, table > tfoot > tr.success > td,
+.table > tfoot > tr.success > th, table > tfoot > tr.success > th {
   background-color: #dff0d8; }
 
 .table-hover > tbody > tr > td.success:hover,
@@ -3980,18 +3980,18 @@ table th[class*="col-"] {
 .table-hover > tbody > tr.success:hover > th {
   background-color: #d0e9c6; }
 
-.table > thead > tr > td.info, .table-content table > thead > tr > td.info,
-.table > thead > tr > th.info, .table-content table > thead > tr > th.info,
-.table > thead > tr.info > td, .table-content table > thead > tr.info > td,
-.table > thead > tr.info > th, .table-content table > thead > tr.info > th,
-.table > tbody > tr > td.info, .table-content table > tbody > tr > td.info,
-.table > tbody > tr > th.info, .table-content table > tbody > tr > th.info,
-.table > tbody > tr.info > td, .table-content table > tbody > tr.info > td,
-.table > tbody > tr.info > th, .table-content table > tbody > tr.info > th,
-.table > tfoot > tr > td.info, .table-content table > tfoot > tr > td.info,
-.table > tfoot > tr > th.info, .table-content table > tfoot > tr > th.info,
-.table > tfoot > tr.info > td, .table-content table > tfoot > tr.info > td,
-.table > tfoot > tr.info > th, .table-content table > tfoot > tr.info > th {
+.table > thead > tr > td.info, table > thead > tr > td.info,
+.table > thead > tr > th.info, table > thead > tr > th.info,
+.table > thead > tr.info > td, table > thead > tr.info > td,
+.table > thead > tr.info > th, table > thead > tr.info > th,
+.table > tbody > tr > td.info, table > tbody > tr > td.info,
+.table > tbody > tr > th.info, table > tbody > tr > th.info,
+.table > tbody > tr.info > td, table > tbody > tr.info > td,
+.table > tbody > tr.info > th, table > tbody > tr.info > th,
+.table > tfoot > tr > td.info, table > tfoot > tr > td.info,
+.table > tfoot > tr > th.info, table > tfoot > tr > th.info,
+.table > tfoot > tr.info > td, table > tfoot > tr.info > td,
+.table > tfoot > tr.info > th, table > tfoot > tr.info > th {
   background-color: #d9edf7; }
 
 .table-hover > tbody > tr > td.info:hover,
@@ -4001,18 +4001,18 @@ table th[class*="col-"] {
 .table-hover > tbody > tr.info:hover > th {
   background-color: #c4e3f3; }
 
-.table > thead > tr > td.warning, .table-content table > thead > tr > td.warning,
-.table > thead > tr > th.warning, .table-content table > thead > tr > th.warning,
-.table > thead > tr.warning > td, .table-content table > thead > tr.warning > td,
-.table > thead > tr.warning > th, .table-content table > thead > tr.warning > th,
-.table > tbody > tr > td.warning, .table-content table > tbody > tr > td.warning,
-.table > tbody > tr > th.warning, .table-content table > tbody > tr > th.warning,
-.table > tbody > tr.warning > td, .table-content table > tbody > tr.warning > td,
-.table > tbody > tr.warning > th, .table-content table > tbody > tr.warning > th,
-.table > tfoot > tr > td.warning, .table-content table > tfoot > tr > td.warning,
-.table > tfoot > tr > th.warning, .table-content table > tfoot > tr > th.warning,
-.table > tfoot > tr.warning > td, .table-content table > tfoot > tr.warning > td,
-.table > tfoot > tr.warning > th, .table-content table > tfoot > tr.warning > th {
+.table > thead > tr > td.warning, table > thead > tr > td.warning,
+.table > thead > tr > th.warning, table > thead > tr > th.warning,
+.table > thead > tr.warning > td, table > thead > tr.warning > td,
+.table > thead > tr.warning > th, table > thead > tr.warning > th,
+.table > tbody > tr > td.warning, table > tbody > tr > td.warning,
+.table > tbody > tr > th.warning, table > tbody > tr > th.warning,
+.table > tbody > tr.warning > td, table > tbody > tr.warning > td,
+.table > tbody > tr.warning > th, table > tbody > tr.warning > th,
+.table > tfoot > tr > td.warning, table > tfoot > tr > td.warning,
+.table > tfoot > tr > th.warning, table > tfoot > tr > th.warning,
+.table > tfoot > tr.warning > td, table > tfoot > tr.warning > td,
+.table > tfoot > tr.warning > th, table > tfoot > tr.warning > th {
   background-color: #fcf8e3; }
 
 .table-hover > tbody > tr > td.warning:hover,
@@ -4022,18 +4022,18 @@ table th[class*="col-"] {
 .table-hover > tbody > tr.warning:hover > th {
   background-color: #faf2cc; }
 
-.table > thead > tr > td.danger, .table-content table > thead > tr > td.danger,
-.table > thead > tr > th.danger, .table-content table > thead > tr > th.danger,
-.table > thead > tr.danger > td, .table-content table > thead > tr.danger > td,
-.table > thead > tr.danger > th, .table-content table > thead > tr.danger > th,
-.table > tbody > tr > td.danger, .table-content table > tbody > tr > td.danger,
-.table > tbody > tr > th.danger, .table-content table > tbody > tr > th.danger,
-.table > tbody > tr.danger > td, .table-content table > tbody > tr.danger > td,
-.table > tbody > tr.danger > th, .table-content table > tbody > tr.danger > th,
-.table > tfoot > tr > td.danger, .table-content table > tfoot > tr > td.danger,
-.table > tfoot > tr > th.danger, .table-content table > tfoot > tr > th.danger,
-.table > tfoot > tr.danger > td, .table-content table > tfoot > tr.danger > td,
-.table > tfoot > tr.danger > th, .table-content table > tfoot > tr.danger > th {
+.table > thead > tr > td.danger, table > thead > tr > td.danger,
+.table > thead > tr > th.danger, table > thead > tr > th.danger,
+.table > thead > tr.danger > td, table > thead > tr.danger > td,
+.table > thead > tr.danger > th, table > thead > tr.danger > th,
+.table > tbody > tr > td.danger, table > tbody > tr > td.danger,
+.table > tbody > tr > th.danger, table > tbody > tr > th.danger,
+.table > tbody > tr.danger > td, table > tbody > tr.danger > td,
+.table > tbody > tr.danger > th, table > tbody > tr.danger > th,
+.table > tfoot > tr > td.danger, table > tfoot > tr > td.danger,
+.table > tfoot > tr > th.danger, table > tfoot > tr > th.danger,
+.table > tfoot > tr.danger > td, table > tfoot > tr.danger > td,
+.table > tfoot > tr.danger > th, table > tfoot > tr.danger > th {
   background-color: #f2dede; }
 
 .table-hover > tbody > tr > td.danger:hover,
@@ -4053,18 +4053,18 @@ table th[class*="col-"] {
       overflow-y: hidden;
       -ms-overflow-style: -ms-autohiding-scrollbar;
       border: 1px solid #ddd; }
-      .table-responsive > .table, .table-content .table-responsive > table {
+      .table-responsive > .table, .table-responsive > table {
         margin-bottom: 0; }
-        .table-responsive > .table > thead > tr > th, .table-content .table-responsive > table > thead > tr > th,
-        .table-responsive > .table > thead > tr > td, .table-content
+        .table-responsive > .table > thead > tr > th, .table-responsive > table > thead > tr > th,
+        .table-responsive > .table > thead > tr > td,
         .table-responsive > table > thead > tr > td,
-        .table-responsive > .table > tbody > tr > th, .table-content
+        .table-responsive > .table > tbody > tr > th,
         .table-responsive > table > tbody > tr > th,
-        .table-responsive > .table > tbody > tr > td, .table-content
+        .table-responsive > .table > tbody > tr > td,
         .table-responsive > table > tbody > tr > td,
-        .table-responsive > .table > tfoot > tr > th, .table-content
+        .table-responsive > .table > tfoot > tr > th,
         .table-responsive > table > tfoot > tr > th,
-        .table-responsive > .table > tfoot > tr > td, .table-content
+        .table-responsive > .table > tfoot > tr > td,
         .table-responsive > table > tfoot > tr > td {
           white-space: nowrap; }
       .table-responsive > .table-bordered {
@@ -5495,11 +5495,11 @@ tbody.collapse.in {
   .carousel-indicators {
     bottom: 20px; } }
 
-.clearfix:before, .modal-body:before, .form-modal .modal-body:before, .clearfix:after, .modal-body:after, .form-modal .modal-body:after {
+.clearfix:before, .modal-body:before, .form-modal .modal-body:before, main:before, .clearfix:after, .modal-body:after, .form-modal .modal-body:after, main:after {
   content: " ";
   display: table; }
 
-.clearfix:after, .modal-body:after, .form-modal .modal-body:after {
+.clearfix:after, .modal-body:after, .form-modal .modal-body:after, main:after {
   clear: both; }
 
 .center-block {
@@ -5718,19 +5718,6 @@ tbody.collapse.in {
   padding-left: 0;
   padding-right: 0; }
 
-.table-content {
-  overflow-x: auto; }
-  .table-content table {
-    width: 100%; }
-    .table-content table th {
-      border-right: 1px solid;
-      background-color: #2c742a;
-      color: white; }
-    .table-content table td {
-      border-color: rgba(44, 116, 42, 0.2) !important; }
-    .table-content table tbody tr:nth-child(odd) {
-      background-color: rgba(44, 116, 42, 0.1); }
-
 ::-webkit-scrollbar {
   width: 5px;
   position: absolute; }
@@ -5823,9 +5810,9 @@ html {
       -ms-transform: translateY(-5px);
       transform: translateY(-5px);
       text-decoration: none;
-      color: #418237; }
+      color: #f5ad00; }
   .breadcrumb .active a {
-    color: #418237; }
+    color: #f5ad00; }
   .breadcrumb > li + li:before {
     color: rgba(0, 0, 0, 0.4);
     font-family: FontAwesome;
@@ -5898,7 +5885,7 @@ input:focus, button:focus {
   outline: transparent; }
 
 b {
-  font-weight: 600; }
+  font-weight: 700; }
 
 strong {
   font-weight: 700; }
@@ -5911,6 +5898,17 @@ button:hover, button:focus {
 
 label {
   margin-bottom: 0; }
+
+table {
+  width: 100%; }
+  table th {
+    border-right: 1px solid;
+    background-color: #2c742a;
+    color: white; }
+  table td {
+    border-color: rgba(44, 116, 42, 0.2) !important; }
+  table tbody tr:nth-child(odd) {
+    background-color: rgba(44, 116, 42, 0.1); }
 
 .color-white {
   color: white; }
@@ -5925,7 +5923,7 @@ label {
   color: #2c742a; }
 
 .color-2 {
-  color: #418237; }
+  color: #f5ad00; }
 
 .color-3 {
   color: #19204A; }
@@ -5942,7 +5940,7 @@ label {
   color: #2c742a; }
 
 .hover-color-2 a:hover {
-  color: #418237; }
+  color: #f5ad00; }
 
 .hover-color-3 a:hover {
   color: #19204A; }
@@ -5972,7 +5970,7 @@ label {
   background-color: #2c742a; }
 
 .bg-color-2 {
-  background-color: #418237; }
+  background-color: #f5ad00; }
 
 .bg-color-3 {
   background-color: #19204A; }
@@ -5982,6 +5980,9 @@ label {
 
 .text-indent {
   text-indent: 30px; }
+
+.transform-none {
+  text-transform: none; }
 
 .letter-3 {
   letter-spacing: 3px; }
@@ -13218,14 +13219,14 @@ http://flickity.metafizzy.co
   -webkit-background-size: contain;
   background-size: contain; }
 
-.fuller, .claf, [data-flicker]:before, .header-search .bg-wrapper, .short-advantage-items figure img:before, .partner-items figure img:before, .cell-hover, .hover-content .cell-hover, .fullscreen-container .bg-wrapper, .short-sites .bg-wrapper {
+.fuller, .claf, [data-flicker]:before, .header-search .bg-wrapper, .short-advantage-items figure img:before, .partner-items figure img:before, .nunchuck:before, .nunchuck:after, .cell-hover, .hover-content .cell-hover, .fullscreen-container .bg-wrapper, .short-sites .bg-wrapper {
   height: 100%;
   width: 100%;
   position: absolute;
   top: 0;
   left: 0; }
 
-.claf, [data-flicker]:before, .header-search .bg-wrapper, .short-advantage-items figure img:before, .partner-items figure img:before {
+.claf, [data-flicker]:before, .header-search .bg-wrapper, .short-advantage-items figure img:before, .partner-items figure img:before, .nunchuck:before, .nunchuck:after {
   content: ""; }
 
 [class*="boxes"] {
@@ -13416,7 +13417,7 @@ http://flickity.metafizzy.co
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
   .btn-def:hover, .btn-icon:hover {
-    background-color: #418237; }
+    background-color: #f5ad00; }
 
 .btn-opacity {
   background-color: transparent;
@@ -13917,12 +13918,12 @@ html.mm-opening .mm-menu.mm-fullscreen.mm-opened ~ .mm-slideout {
 h1, h2, h3, h4 {
   margin-top: 10px;
   margin-bottom: 10px;
+  font-weight: 700;
   line-height: 150%; }
 
 h1 {
   position: relative;
   text-transform: uppercase;
-  font-weight: 600;
   font-size: 2.0625em; }
 
 h2 {
@@ -13932,12 +13933,10 @@ h2 {
   margin-bottom: 10px; }
 
 h3 {
-  font-size: 1.25em;
-  font-weight: 700; }
+  font-size: 1.25em; }
 
 h4 {
-  font-size: 1.125em;
-  font-weight: 700; }
+  font-size: 1.125em; }
 
 h5 {
   font-weight: 700;
@@ -14061,6 +14060,8 @@ main {
       .rev-slider h1, .rev-slider h2 {
         text-align: center !important;
         font-size: 1.25em; } }
+  .rev-slider.banner-slider .slide-header {
+    text-align: center; }
 
 .banner-icons {
   width: 85%; }
@@ -14298,7 +14299,7 @@ main {
 .short-sites {
   position: relative;
   overflow: hidden; }
-  .short-sites .clearfix, .short-sites .modal-body {
+  .short-sites .clearfix, .short-sites .modal-body, .short-sites main {
     position: relative; }
   .short-sites .macbook {
     pointer-events: none;
@@ -14611,6 +14612,215 @@ main {
     .partner-services-item .btn-content {
       position: absolute; } }
 
+@media (max-width: 991px) {
+  .about-info-items .about-info.pie-cell {
+    width: 100%; } }
+
+.about-info {
+  position: relative;
+  margin: 30px 0; }
+  .about-info h2 {
+    font-weight: 700; }
+  .about-info.text-left .about-info-content {
+    padding-left: 8%; }
+  .about-info.text-right .about-info-content {
+    padding-right: 8%; }
+  .about-info .nunchuck {
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+  .about-info:hover .nunchuck {
+    -webkit-transform: scaleY(0.5);
+    -ms-transform: scaleY(0.5);
+    transform: scaleY(0.5); }
+    .about-info:hover .nunchuck:before {
+      -webkit-transform: translateY(-20px) scaleY(20);
+      -ms-transform: translateY(-20px) scaleY(20);
+      transform: translateY(-20px) scaleY(20); }
+    .about-info:hover .nunchuck:after {
+      -webkit-transform: translateY(20px) scaleY(20);
+      -ms-transform: translateY(20px) scaleY(20);
+      transform: translateY(20px) scaleY(20); }
+
+.nunchuck {
+  width: 6px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  position: absolute;
+  top: 20%;
+  height: 130px; }
+  .nunchuck.text-right {
+    right: 15px; }
+  .nunchuck:before, .nunchuck:after {
+    margin-left: -1px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    height: 8px;
+    width: 8px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%; }
+  .nunchuck:before {
+    top: -20%;
+    background-color: inherit; }
+  .nunchuck:after {
+    top: unset;
+    bottom: -20%;
+    background-color: inherit; }
+
+.about-slogan {
+  text-align: center;
+  position: relative; }
+  .about-slogan:hover .fa {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1); }
+    .about-slogan:hover .fa:before {
+      opacity: 0.5; }
+    .about-slogan:hover .fa:after {
+      -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      transform: scale(1.2);
+      opacity: 0.00; }
+  .about-slogan .fa {
+    position: relative;
+    color: #f5ad00;
+    font-size: 140px;
+    -webkit-transition: all 0.4s ease-out 0.1s;
+    -o-transition: all 0.4s ease-out 0.1s;
+    transition: all 0.4s ease-out 0.1s;
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9); }
+    .about-slogan .fa:before, .about-slogan .fa:after {
+      -webkit-transition: all 0.9s ease-in-out;
+      -o-transition: all 0.9s ease-in-out;
+      transition: all 0.9s ease-in-out; }
+    .about-slogan .fa:before {
+      opacity: 0.1; }
+    .about-slogan .fa:after {
+      opacity: 0.5;
+      color: #2c742a;
+      content: "\f118";
+      position: absolute;
+      left: 0; }
+
+.contacts-feedback input {
+  height: 50px;
+  text-align: center; }
+
+.contacts-feedback textarea {
+  padding: 15px 15px;
+  height: 200px; }
+
+.contacts-feedback .form-control {
+  text-transform: uppercase;
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+  .contacts-feedback .form-control:focus {
+    border-color: rgba(44, 116, 42, 0.3); }
+
+.contacts-info h1 {
+  color: #2c742a; }
+
+.contacts-info .contacts-info-item {
+  margin: 30px 0; }
+
+.gallery-video {
+  position: relative; }
+  .gallery-video .crutch {
+    width: inherit;
+    background: white;
+    height: 120px;
+    position: absolute;
+    float: left;
+    z-index: 1; }
+    .gallery-video .crutch.bottom {
+      height: 100px;
+      bottom: 0; }
+  .gallery-video .video-container {
+    overflow: hidden;
+    position: relative;
+    margin-top: 120px; }
+  .gallery-video .video-main {
+    margin-bottom: 40px; }
+    .gallery-video .video-main .video-cell {
+      width: 100%;
+      min-height: 450px;
+      cursor: pointer;
+      counter-increment: video-cell; }
+      .gallery-video .video-main .video-cell iframe {
+        border: 5px solid rgba(44, 116, 42, 0.5);
+        background-color: rgba(245, 173, 0, 0.3);
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        width: 100%;
+        height: 510px; }
+  .gallery-video .video-nav {
+    overflow-y: auto; }
+  .gallery-video .video-nav {
+    text-align: center; }
+    .gallery-video .video-nav .video-cell {
+      width: 100%;
+      position: relative;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      padding: 0 15px;
+      margin: 15px 0;
+      height: 160px;
+      cursor: pointer;
+      counter-increment: video-cell; }
+      .gallery-video .video-nav .video-cell img {
+        max-height: 100%;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+        width: auto; }
+      .gallery-video .video-nav .video-cell:first-child {
+        margin-top: 0; }
+      .gallery-video .video-nav .video-cell .video-content {
+        width: 100%; }
+      .gallery-video .video-nav .video-cell iframe {
+        border: 3px solid transparent;
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        pointer-events: none;
+        height: 100%;
+        width: 100%;
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+        -webkit-border-radius: 7px;
+        border-radius: 7px;
+        opacity: 1; }
+        .gallery-video .video-nav .video-cell iframe.in {
+          border-color: white;
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1);
+          opacity: 1; }
+  .gallery-video .video-nav .video-cell:before {
+    font-size: 50px;
+    line-height: 80px; }
+  .gallery-video .video-nav .video-cell.is-nav-selected iframe {
+    border-color: #2c742a; }
+  @media (max-width: 991px) {
+    .gallery-video .video-nav .video-cell {
+      height: 300px; }
+      .gallery-video .video-nav .video-cell iframe {
+        pointer-events: auto;
+        border: 5px solid #2c742a; } }
+  @media (min-width: 992px) {
+    .gallery-video .video-nav, .gallery-video .video-main {
+      max-height: 525px; } }
+
 /*
 										 ---FOOTER---
 */
@@ -14810,9 +15020,10 @@ main {
   .carousel-stand .carousel-nav .carousel-cell.is-nav-selected {
     background: #ED2; }
 
-/*
-		_helper.scss	
-*/
+/*!
+ *  Pietrap 0.5.2 by @osycle - https://t.me/osycle
+ *  License - http://lifestyle.uz/license (CSS: MIT License)
+ */
 .box-0 {
   width: 0%; }
 
@@ -16062,6 +16273,10 @@ html .p-r-120 {
 
 .pie-cells-12 .pie-cell {
   width: 8.33333%; }
+
+@media (max-width: 991px) {
+  [class*="pie-cells"] .pie-cell {
+    width: 100%; } }
 
 .pie-flex-content {
   display: -webkit-box;
