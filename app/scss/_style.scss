@@ -853,6 +853,12 @@ main{
 	ol, ul{
 		text-align: left;
 	}
+	ol{
+		margin: 25px 0;
+	}
+	p{
+		line-height: 200%;
+	}
 }
 
 
@@ -1401,7 +1407,6 @@ main{
 			transition: all 0.3s ease-in-out;
 		}
 		img{
-			width: 110px;
 			max-width: auto;
 			max-height: auto;
 			height: auto;
@@ -1425,7 +1430,7 @@ main{
 
 	}
 	.img-content{
-		width: 100px;
+		//width: 100px;
 		margin: auto;
 		height: 110px;
 		position: relative;
@@ -1525,7 +1530,28 @@ main{
 
 }
 
-
+.services-links{
+	
+	ul{
+		display: flex;
+		flex-flow: wrap;
+		justify-content: center;
+	}
+	li{
+		flex-basis: 25%;
+		text-align: center;
+		margin: 18px 0;
+		text-transform: uppercase;
+		font-size: 1.1em;
+		font-weight: 700;
+		//width: 24%;
+	}
+	@media ( max-width: 991px ) {
+		li{
+			flex-basis: 50%;
+		}
+	}
+}
 
 
 

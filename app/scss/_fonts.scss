@@ -89,6 +89,16 @@ $path: "../fonts";
 // }
 
 
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url($path+'/MyriadPro-Regular.eot');
+  src: local('Myriad Pro Regular'), local('MyriadPro-Regular'),
+    url($path+'/MyriadPro-Regular.eot?#iefix') format('embedded-opentype'),
+    url($path+'/MyriadPro-Regular.woff') format('woff'),
+    url($path+'/MyriadPro-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 
 @font-face {
