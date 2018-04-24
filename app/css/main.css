@@ -13502,6 +13502,9 @@ http://flickity.metafizzy.co
     .header-hidden {
       display: none; } }
 
+.header-top-content [class*="pie"] {
+  white-space: nowrap; }
+
 .header-top-content p, .header-top-content strong {
   line-height: 140%; }
 

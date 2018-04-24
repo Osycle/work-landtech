@@ -278,6 +278,9 @@ $header-min-menu: 100px;
 	}
 }
 .header-top-content{
+	[class*="pie"]{
+		white-space: nowrap;
+	}
 	p, strong{
 		line-height: 140%;
 	}
