@@ -13980,7 +13980,8 @@ main {
 
 .main-content {
   z-index: 1;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   .main-content ol, .main-content ul {
     text-align: left; }
   .main-content ol {

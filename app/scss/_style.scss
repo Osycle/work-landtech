@@ -267,7 +267,6 @@ $header-min-menu: 100px;
 		position: fixed;
 	}
 }
-
 .header-hidden{
 	//position: relative;
 	background-color: $color-1;
@@ -853,6 +852,7 @@ main{
 .main-content{
 	z-index: 1;
 	position: relative;
+	overflow: hidden;
 	ol, ul{
 		text-align: left;
 	}
